@@ -31,6 +31,7 @@ In order to run the script, you have to install the dependency: `pip3 install tw
 
 ### Discord
 
+As for now, you could use a bot like [MEE6](https://mee6.xyz) to notify your server about a new tweet.
 Dependency [discord.py](https://github.com/Rapptz/discord.py): `pip3 install discord.py`
 
 ## Usage
@@ -39,10 +40,13 @@ Dependency [discord.py](https://github.com/Rapptz/discord.py): `pip3 install dis
 
 ## Contributing
 
-The following stuff should be done:
+The following stuff should be done (in no particular order):
 
 - Genius Integration to pull lyrics automatically (<https://www.storybench.org/download-song-lyrics-genius-using-python/>, <https://genius.com/developers>, <https://github.com/johnwmillr/LyricsGenius>)
 - unify logging
+- looping
+- replying to Twitter DMs and mentions
+- all of the Discord bot
 
 ## License
 
