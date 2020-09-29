@@ -31,9 +31,8 @@ async def main():
         api.verify_credentials()
         logging.info("Authentication OK")
 
-        while True:
+        while not await asyncio.sleep(3):
             print(bot.get_lyrics())
-            await asyncio.sleep(60 * 3)
 
     except tweepy.TweepError as twitter_error:
         error_json = twitter_error.response.text
@@ -44,4 +43,10 @@ async def main():
         logging.error(f"An unknown exception occurred: {ex}. Exiting program.")
         sys.exit(1)
 
-asyncio.run(main())
+if __name__ == "__main__":   
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        logging.info("Program interrupted.")
+    
+    sys.exit(0)
